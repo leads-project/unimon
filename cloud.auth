@@ -1,0 +1,21 @@
+{
+ "MicroCloud0":{
+     "username": "dodo",
+     "password": "xxxxxx",
+     "tenant": "tudLEADS",
+        "url": "https://dashboard-dresden2.cloudandheat.com:5000/v2.0",
+     "monitorhost": "180.156.73.108",
+     "monitorport": "3737"
+     },
+
+ "MicroCloud1":{
+     "username": "dodo",
+     "password": "xxxxxx",
+     "tenant": "tudLEADS",
+     "url": "https://dashboard-hamm6.cloudandheat.com:5000/v2.0",
+     "monitorhost": "15.147.254.204",
+     "monitorport": "3737"
+     }
+                                             
+}
+

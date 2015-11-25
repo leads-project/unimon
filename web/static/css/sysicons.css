@@ -1,0 +1,94 @@
+.sysiconscontainer {
+	cursor: default;
+}
+
+.switch {
+	stroke: black;
+	stroke-width: 1;
+	fill: green;
+}
+
+.node {
+	stroke: black;
+	stroke-width: 1;
+	fill: none;
+}
+
+.biglabel {
+	font-weight: 600;
+    font-family: Arial;
+	font-size: 14;
+}
+
+.label {
+	font-weight: 400;
+    font-family: Arial;
+    /*font: bold 10px/30px Georgia, serif;*/
+	font-size: 11;
+}
+
+.statusIndicator {
+	stroke: black;
+}
+
+.status-online {
+	fill: #5cb85c;
+}
+
+.status-offline {
+	fill: #999;
+}
+
+.status-boot {
+	fill: #428bca;
+}
+
+.status-failure {
+    fill: #67a2d4; /*#f0ad4e; */
+}
+
+.status-shutdown {
+	fill: #787F3F;
+}
+
+.bar-cpu {
+	stroke: none;
+	fill: #E88C85;
+}
+
+.bar-nw_in {
+	stroke: none;
+	fill: #9FC2FF;
+}
+
+.bar-nw_out {
+    stroke: none;
+    fill:  #5cb85c;
+}
+.bar-mem {
+	stroke: none;
+	fill: #E8BE85;
+}
+
+#sysiconsTooltip.hidden {
+	display: none;
+}
+
+.sysicons-tooltip {
+	position: absolute;
+	background-color: white;
+	padding: 10px;
+	z-index: 100;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	pointer-events: none;
+}

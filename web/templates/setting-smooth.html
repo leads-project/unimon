@@ -1,0 +1,25 @@
+{% extends 'master.html' %}
+
+
+{% block body %}
+<div class="container">
+       <!--<h1><small>Setting.</small></h1>-->
+
+        <table class="table table-striped table-bordered table-condensed">
+        <thead>
+            <tr>
+            <form action="" method="post">
+                
+                <tr><h1><small>Change CPU Upper Threshold.</small></h1>
+                
+                <p><input type=text name=cputhreshold> <small> [%]</small> </tr> 
+                <tr><h1><small>Change CPU Lower Threshold.</small></h1>
+                <p><input type=text name=cputhreshold_down> <small> [%]</small> </tr>
+
+                <p><input type=submit value=Save>
+            </form>
+            </tr>
+        </thead>
+        </table>
+</div>
+{% endblock %}

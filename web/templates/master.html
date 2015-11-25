@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>LEADS {% block title %}{% endblock %}</title>
+    {%  block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/progress.css') }}" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sysicons.css') }}" type="text/css" media="screen" charset="utf-8">
+    {% endblock %}
+
+</head>
+ <!-- <body onload="init()"> -->
+ <body>
+    <header>
+        <div class="container">
+            <a href="/" alt="home"><h1>Cloud - map reduce service</h1></a>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="/" alt="home">Home</a></li>
+                        <li><a href="/clouds" alt="clouds">Micro-clouds</a></li>
+                        <li><a href="/nodes-status" alt="nodes">Nodes</a></li>
+                        <li><a href="/setting" alt="nodes">Setting</a></li>
+                        <li><a href="http://leads-project.eu/" alt="leads">LEADS</a></li>
+                    </ul>
+                </nav>
+                <aside>
+                <p>Service status: <span class="running">{{ g.server['Cloud_service_status'] }}</span> :: active micro-clouds: <span class="active-workers">{{ g.nodes|count }}</span></p>
+                </aside>
+
+            </div>
+        </div>
+    </header>
+    <div class="body">
+    {% block body %}
+    {% endblock %}
+    </div>
+
+    <footer>
+        <div class="cell">
+		<a href="http://www.leads-project.eu/" alt="LEADS project">powered by LEADS {{ g.server['web_version'] }}</a>
+        </div>
+    </footer>
+
+    {% block js %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.7.2.min.js') }}" charset="utf-8"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}" charset="utf-8"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/progress.js') }}" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.0/backbone-min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.js" charset="utf-8"></script> 
+    <script type="text/javascript" src="{{ url_for('static', filename='js/sysicons.js') }}" charset="utf-8"></script>
+
+
+
+    {% endblock %}
+</body>
+</html>

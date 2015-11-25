@@ -1,0 +1,48 @@
+{% extends "master.html" %}
+
+{% block title %} - Nodes{% endblock %}
+
+{% block body %}
+<div class="container main">
+    <div class="nodes section">
+        <h1>Micro-Clouds statistic</h1>
+
+        <div class="filters">
+            <ul>
+                <li><a href="#" data-filter="all">all</a></li>
+                {% for job_type in g.job_types %}
+                <li><a href="#" data-filter="{{ job_type }}">{{ job_type }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <table class="nodes-table table table-striped table-bordered table-condensed">
+            <thead>
+                <tr>
+                    <th class="node-name">Name</th>
+                    <th class="working">Status [#running VMs, total VMs]</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for node, status in g.nodes.iteritems() %}
+                <tr>
+                    <td>{{ node }}</td>
+                    {% if status %}
+                    <td> {{ status }}</td>
+                    {% else %}
+                    <td>Waiting for a new job...</td>
+                    {% endif %}
+                </tr>
+                {% else %}
+                <tr>
+                    <td class="no-nodes" colspan="2">No nodes registered so far...</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <span class="explain">click a Micro-cloud to view its activity</span> 
+    </div>
+
+</div>
+{% endblock %}
