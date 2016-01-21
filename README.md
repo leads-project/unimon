@@ -14,7 +14,7 @@ Multi-clouds monitoring framework. The old name is DoLen.
 * Start the master that receives the probes (CPU, RAM, and network utilization): $fab startMonitor
 * Start the web interface: $fab runWeb
 * Access: http://IP_of_Redis_server:6868/ in order to get the real-time monitoring data from multiple clouds
-* You also can create a client to get data directly from the Redis database
+* You can also use any redis compatible client in order to pull the collected data directly from the Redis database
 * Stop the master via: $fab stopMonitor
 
 ### Contact? ###
