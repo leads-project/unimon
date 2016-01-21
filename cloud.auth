@@ -1,19 +1,19 @@
 {
  "MicroCloud0":{
-     "username": "dodo",
-     "password": "xxxxxx",
-     "tenant": "tudLEADS",
-        "url": "https://dashboard-dresden2.cloudandheat.com:5000/v2.0",
-     "monitorhost": "180.156.73.108",
+     "username": "user",
+     "password": "pwd",
+     "tenant": "tenant",
+     "url": "https://openstack-endpoint1:5000/v2.0",
+     "monitorhost": "x.x.x.x",
      "monitorport": "3737"
      },
 
  "MicroCloud1":{
-     "username": "dodo",
-     "password": "xxxxxx",
-     "tenant": "tudLEADS",
-     "url": "https://dashboard-hamm6.cloudandheat.com:5000/v2.0",
-     "monitorhost": "15.147.254.204",
+     "username": "user",
+     "password": "pwd",
+     "tenant": "tenant",
+     "url": "https://openstack-endpoint2:5000/v2.0",
+     "monitorhost": "x.x.x.x",
      "monitorport": "3737"
      }
                                              
