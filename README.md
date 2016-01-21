@@ -9,7 +9,7 @@ Multi-clouds monitoring framework. The old name is DoLen.
 ### How to run? ###
 * Install [fabric](http://www.fabfile.org/) (under Ubuntu $ sudo apt-get install fabric)
 * Install requirements: $ fab requirement
-* Add 1) the hostnames or the IP addresses of the hosts that you want to monitor and 2) IP of the redis server at beginning of fabfile (Line 23/24 in fabfile.py).
+* Add 1) the hostnames or the IP addresses of the hosts that you want to monitor and 2) IP of the redis server at beginning of fabfile (Line [23/24](https://github.com/leads-project/unimon/blob/master/fabfile.py#L23) in fabfile.py).
 * Upload the probe program (i.e., the client for monitoring a machine) to the hosts: $fab uploadMonitor
 * Start the master that receives the probes (CPU, RAM, and network utilization): $fab startMonitor
 * Start the web interface: $fab runWeb
