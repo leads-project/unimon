@@ -9,13 +9,13 @@ Multi-clouds monitoring framework. The old name is DoLen.
 ### How to run? ###
 * Install [fabric](http://www.fabfile.org/) (under Ubuntu $ sudo apt-get install fabric)
 * Install requirements: $ fab requirement
-* Add the hostname or IP address of the VMs that you want to monitor and IP of Redis server at beginning of fabfile
-* Upload probe program to VMs: $fab uploadMonitor
-* Start monitor VMs (CPU, RAM, and network utilization): $fab startMonitor
-* Start Web interface: $fab runWeb
-* Access: http://IP_of_Redis_server:6868/ to get real-time monitoring data from multiple clouds
+* Add 1) the hostnames or the IP addresses of the hosts that you want to monitor and 2) IP of the redis server at beginning of fabfile (Line 21/23).
+* Upload probe program (i.e., the clients for monitoring) to the hosts: $fab uploadMonitor
+* Start the server software that receives the probes (CPU, RAM, and network utilization): $fab startMonitor
+* Start the web interface: $fab runWeb
+* Access: http://IP_of_Redis_server:6868/ in order to get the real-time monitoring data from multiple clouds
 * You also can create a client to get data directly from Redis
-* Stop monitor VMs on multiple clouds: $fab stopMonitor
+* Stop the server monitor via: $fab stopMonitor
 
 ### Contact? ###
 * Do Le Quoc (SE Group TU Dresden): do@se.inf.tu-dresden.de 
