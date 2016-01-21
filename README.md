@@ -1,13 +1,13 @@
 # UniMon
 * Multi-clouds monitoring framework using Redis backend. Redis is used to store the monitored data that can be accessed in real-time.
-* Monitoring tool for LEADS project.
-* [Wiki](http://www.leads-project.eu/wiki/)
+* [Monitoring tool for LEADS project](http://www.leads-project.eu/wiki/)
 
 ### Configuration ###
 * Add 1) the hostnames or the IP addresses of the hosts that you want to monitor and 2) IP of the redis server at beginning of fabfile (Line [23/24](https://github.com/leads-project/unimon/blob/master/fabfile.py#L23) in `fabfile.py`).
 
 ### How to run the code ###
-* Install [fabric](http://www.fabfile.org/) (under Ubuntu `$ sudo apt-get install fabric`)
+* Install [fabric](http://www.fabfile.org/)
+   * `$ sudo apt-get install fabric` (under Ubuntu) 
 * Install requirements:
    * `$ fab requirement`
 * Upload the probe program (i.e., the client for monitoring a machine) to the hosts: 
