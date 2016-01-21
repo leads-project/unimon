@@ -2,13 +2,14 @@
 Multi-clouds monitoring framework. The old name is DoLen.
 
 ###What is this repository for? ###
-* Multi-clouds monitoring framework using Redis backend. Redis is used to store monitoring data that can be accessed in real-time.
+* Multi-clouds monitoring framework using Redis backend. Redis is used to store the monitored data that can be accessed in real-time.
 * Monitoring tool for LEADS project.
 * [Wiki](http://www.leads-project.eu/wiki/)
 
 ### How to run? ###
-* Install requirements: $fab requirement
-* Add the hostname or IP address of VMs that you want to monitor and IP of Redis server at beginning of fabfile
+* Install [fabric](http://www.fabfile.org/) (under Ubuntu $ sudo apt-get install fabric)
+* Install requirements: $ fab requirement
+* Add the hostname or IP address of the VMs that you want to monitor and IP of Redis server at beginning of fabfile
 * Upload probe program to VMs: $fab uploadMonitor
 * Start monitor VMs (CPU, RAM, and network utilization): $fab startMonitor
 * Start Web interface: $fab runWeb
