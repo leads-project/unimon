@@ -41,7 +41,7 @@ def requirement():
     run('echo "Y"|sudo pip install ujson')
     run('echo "Y"|sudo pip install psutil')
 
-#Upload DoLen probe daemon
+#Upload UniMon probe daemon
 @roles('workers', 'servers')
 def uploadMonitor():
     put("./probe.py", "/tmp/probe.py")
@@ -57,7 +57,7 @@ def removeMonitor():
         run('rm ' + full_path_to_file)
 
 
-#Start DoLen probe daemon
+#Start UniMon probe daemon
 @roles('servers', 'workers')
 def startMonitor():
     if env.host_string in env.roledefs['workers'] or  env.host_string in env.roledefs['servers']:
@@ -69,10 +69,10 @@ def stopMonitor():
     with settings(warn_only=True):
         run("pkill -f 'probe.py'")
 
-#Run DoLen frontend
+#Run UniMon frontend
 @roles('servers')
 def runWeb():
-    cmd =  'dtach -n /tmp/dtach-DoLen-web-server python web/app.py'
+    cmd =  'dtach -n /tmp/dtach-UniMon-web-server python web/app.py'
     run(cmd, pty=True)    
 
 @serial
